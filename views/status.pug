@@ -1,0 +1,47 @@
+extends headless 
+block content
+  link(href="/css/status.css" rel="stylesheet")
+  main 
+    h1 Application Status
+    .wrapper(data-cur-status=`${appStatus}` data-max-length="5")
+      .card
+        .diagram
+          .icon
+        .text 
+          span Initiated 
+          img(src="/assets/svgs/question-circle.svg")
+          p.details Application has successfuly begin, use the chat icon to conduct  your screening exercise with our credible application referee.
+      
+      .card
+        .diagram
+          .icon
+        .text 
+          span Submitted 
+          img(src="/assets/svgs/question-circle.svg")
+          p.details Application has been successfuly submitted, and being sent to your employer.
+      
+      .card
+        .diagram
+          .icon
+        .text 
+          span Received 
+          img(src="/assets/svgs/question-circle.svg")
+          p.details Application has been successfuly received by your employer. 
+      
+      .card
+        .diagram
+          .icon
+        .text 
+          span Processing 
+          img(src="/assets/svgs/question-circle.svg")
+          p.details Application is being processed by your employer. Please check back later. 
+      
+      .card
+        .diagram
+          .icon
+        .text 
+          span Approved 
+          img(src="/assets/svgs/question-circle.svg")
+          p.details Application has been approved, please reach out to the customer support for the next step. 
+    .message
+  script(src="/js/status.js" type="text/javascript")

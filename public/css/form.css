@@ -1,0 +1,104 @@
+@import url('styles.css');
+form {
+  padding: 48px 24px 64px;
+  border: solid var(--gray);
+  border-radius: 8px;
+  margin: 48px 16px;
+  margin-top: calc((100vh - 300px) / 3);
+}
+h1 {
+  text-align: center;
+  color: var(--gray);
+  margin-bottom: 24px;
+}
+.wrapper {
+  font-family: inherit;
+  position: relative;
+  margin-bottom: 8px;
+}
+input {
+  border: 1.5px solid #dadce0;
+  border-radius: 4px;
+  box-shadow: 0 0 8px transparent;
+  font-size: 16px;
+  line-height: 24px;
+  outline: transparent;
+  padding: 11px 16px;
+  display: block;
+  width: 100%;
+  transition: all 500ms;
+  color: var(--gray-dark);
+}
+input:focus {
+  box-shadow: 0 0 0 var(--gray-dark);
+  border: 1.5px solid var(--gray-dark);
+}
+label {
+  position: absolute;
+  left: 16px;
+  color: #727586;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0;
+  max-width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  text-align: left;
+  text-overflow: ellipsis;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.4s;
+  white-space: nowrap;
+  z-index: 10;
+}
+label.focus {
+  transform: translate(-12px, -35px) scale(0.85);
+  padding: 0 1.5px;
+  background-color: #fff;
+}
+.error {
+  color: var(--danger);
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+input.error {
+  box-shadow: 0 0 0 var(--danger);
+  border: 1.5px solid var(--danger);
+}
+button {
+  width: 200px;
+  padding: 10px 20px;
+  background-color: var(--white);
+  border: solid var(--gray);
+  border-radius: 8px;
+  color: var(--gray-dark);
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover,
+button:focus {
+  background-color: var(--light);
+}
+@media screen and (min-width: 576px) {
+  form {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  form {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 992px) {
+  form {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  form {
+    width: 40%;
+  }
+}

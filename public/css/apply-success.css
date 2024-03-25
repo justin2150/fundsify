@@ -1,0 +1,61 @@
+@import url('styles.css');
+main {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--gray-dark);
+  margin-top: calc((100vh - 500px) / 3);
+  max-height: 500px;
+}
+h1 {
+  text-transform: capitalize;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+p span {
+  padding: 8px 16px;
+  border: solid var(--light);
+  background-color: var(--light);
+  border-radius: 8px;
+}
+p.app-id {
+  line-height: 2;
+}
+p a {
+  text-decoration: none;
+  color: var(--gray-dark);
+  font-weight: bold;
+}
+
+@media screen and (min-width: 576px) {
+  main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  main {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 992px) {
+  main {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main {
+    width: 40%;
+  }
+}

@@ -1,0 +1,34 @@
+doctype html
+html 
+  head 
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="viewport", content="width=device-width initial-scale=1 shrink-to-fit=no")
+    link(rel="stylesheet", href=`css/layout.css`)
+    link(rel="stylesheet", href=`css/${css}.css`)
+    link(rel="icon", type="image/jpeg", href="assets/site-icon.jpg")
+    title= title
+    script(async src="https://www.googletagmanager.com/gtag/js?id=G-R435M1NTMZ")
+    script window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-R435M1NTMZ');
+  body 
+    block content
+    div(id="fb-root")
+    div(id="fb-customer-chat" class="fb-customerchat")
+    script.
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "103309116163139");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    script.
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v19.0'
+        });
+      };
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));

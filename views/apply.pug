@@ -1,0 +1,14 @@
+extends headless
+block content
+  form(method="post" action="/funds/apply")
+    h2 Funds Application 
+    label(for="amount") Amount
+    div(id='amount').amount
+      label(for='formatted') $
+      input(type="text" id="formatted" name="amount" required).formatted
+
+    label(for="purpose") Purpose of request
+    input(type="text" id="purpose" name="purpose" required).purpose
+
+    button Submit
+  script(src="js/apply.js" type="text/javascript")

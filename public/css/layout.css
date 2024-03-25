@@ -1,0 +1,243 @@
+@import url('styles.css');
+header {
+  width: 100%;
+  height: 70px;
+  padding: 10px 20px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+a.logo:link,
+a.logo:visited {
+  text-decoration: none;
+  color: var(--gray-dark);
+}
+.logo {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+.logo .image {
+  width: 50px;
+  height: 50px;
+}
+.logo .text {
+  font-size: 25px;
+}
+.close {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.bars,
+.times {
+  display: block;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin: auto 0;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block;
+}
+nav {
+  position: absolute;
+  top: 70px;
+  z-index: 1000;
+  height: calc(100vh - 70px) !important;
+  width: 100%;
+  transition: left 0.5s;
+  background-color: var(--light);
+  left: -100%;
+}
+nav .container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+.slide-in {
+  left: 0 !important;
+}
+
+nav .more {
+  position: static;
+}
+nav .more::before {
+  display: none;
+}
+nav .more-container {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--light);
+}
+nav .more-container li:first-child {
+  margin-top: 16px;
+}
+nav a:link {
+  text-decoration: none;
+  color: var(--gray-dark);
+  text-transform: capitalize;
+  display: block;
+}
+nav a:visited {
+  color: var(--gray-dark);
+}
+nav .cta {
+  border: var(--gray-dark) solid;
+  background: none;
+  color: var(--gray-dark) !important;
+  border-radius: 24px;
+  padding: 8px 24px;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+footer {
+  min-height: 40vh;
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+}
+footer .wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+footer p {
+  font-size: 24px;
+  color: var(--gray-dark);
+  margin-bottom: 16px;
+  text-align: center;
+}
+footer a:link {
+  text-decoration: none;
+  color: var(--gray-dark);
+}
+footer a:visited {
+  text-decoration: none;
+  color: var(--gray-dark);
+}
+footer a:hover {
+  text-decoration: none;
+  color: var(--gray-dark);
+}
+footer a:focus {
+  text-decoration: none;
+  color: var(--gray-dark);
+}
+footer .icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+footer img {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--gray-dark);
+  border-radius: 8px;
+  padding: 8px;
+  background-color: var(--white);
+}
+@media screen and (min-width: 992px) {
+  header {
+    height: auto !important;
+  }
+  .close {
+    display: none;
+  }
+  nav {
+    position: static;
+    height: auto !important;
+    background-color: var(--white);
+    transition: none;
+  }
+  nav .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+  }
+  nav .more {
+    position: relative;
+  }
+  nav .more::before {
+    display: block;
+    content: '';
+    position: absolute;
+    right: -30px;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-image: url('../assets/svgs/caret-down.svg');
+    cursor: pointer;
+  }
+  nav .more-container {
+    list-style: none;
+    position: absolute;
+    left: -32px;
+    width: 300%;
+    padding: 24px;
+    flex-direction: column;
+    gap: 16px;
+    background-color: var(--light);
+    border-radius: 8px;
+  }
+  nav .more-container li:first-child {
+    margin-top: 0;
+  }
+  nav .cta {
+    width: 150px;
+  }
+  footer .wrapper {
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  footer p {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .logo {
+    gap: 10px;
+  }
+  .logo .image {
+    width: 60px;
+    height: 60px;
+  }
+  .logo .text {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  header {
+    width: 80%;
+  }
+  .logo {
+    gap: 15px;
+  }
+  .logo .image {
+    width: 70px;
+    height: 70px;
+  }
+  .logo .text {
+    font-size: 35px;
+  }
+}

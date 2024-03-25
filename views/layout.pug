@@ -1,0 +1,59 @@
+doctype html
+html 
+  head 
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="viewport", content="width=device-width initial-scale=1 shrink-to-fit=no")
+    link(rel="stylesheet", href=`css/layout.css`)
+    link(rel="stylesheet", href=`css/${css}.css`)
+    link(rel="icon", type="image/jpeg", href="assets/site-icon.jpg")
+    title= title
+    script(async src="https://www.googletagmanager.com/gtag/js?id=G-R435M1NTMZ")
+    script window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-R435M1NTMZ');
+  body 
+    header
+      a(href="/").logo 
+        img(src="assets/site-logo.jpeg").image
+        span.text Fundsify
+      .close
+        img(src="/assets/svgs/bars.svg").bars
+        img(src="/assets/times.webp").times.hide
+      nav 
+        ul.container 
+          li.more
+            a(href="funds") Funding
+            ul.more-container 
+              li: a(href="funds/status") Status
+          li: a(href="privacy") Privacy
+          li: a(href="about") Who we are
+          li: a(href="funds").cta Apply now
+    script(src="/js/navigation.js" type="text/javascript" defer)
+    block content 
+    footer 
+      .wrapper
+        p &copy; #{new Date().getFullYear()}. All rights reserved Fundsify.net
+        .icons 
+          a(href="https://www.facebook.com/100094171673762").icon: img(src="/assets/svgs/fb-icon.svg")
+          a(href="https://www.instagram.com/fund.sify").icon: img(src="/assets/svgs/insta-icon.svg")
+          a(href="https://wa.me/message/73WHISF4XZ7MM1").icon: img(src="/assets/svgs/whatsapp.svg")
+          a(href="https://x.com/fund_sify").icon: img(src="/assets/svgs/X.svg")
+    div(id="fb-root")
+    div(id="fb-customer-chat" class="fb-customerchat")
+    script.
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "103309116163139");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    script.
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v19.0'
+        });
+      };
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));

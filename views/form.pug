@@ -1,0 +1,12 @@
+extends headless 
+block content
+  link(href="/css/form.css" rel="stylesheet")
+  form(action="/funds/status", method="post")
+    h1 Enter Tracking ID
+    .wrapper
+      label(for="track-id") Tracking ID
+      input(type="text" id="track-id" name="appID" maxlength=8)
+    p.error= error && error
+    button Track
+
+  script(src="/js/form.js")

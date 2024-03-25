@@ -1,0 +1,129 @@
+@import url('/css/styles.css');
+
+main {
+  padding: 36px 16px 60px;
+  color: var(--gray-dark);
+}
+h1 {
+  text-align: center;
+  margin-bottom: 120px;
+}
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+}
+.card .diagram {
+  width: 10vw;
+}
+.card .icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--gray);
+  position: relative;
+  margin-bottom: 130px;
+  border: none;
+}
+.card .icon::after {
+  height: 150px;
+  width: 10px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 2px;
+  right: 5px;
+  content: '';
+  display: block;
+  background-color: inherit;
+  border: none;
+}
+.card:first-child .icon::after {
+  display: none;
+}
+.fill {
+  background-color: var(--primary) !important;
+}
+.card .text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: relative;
+  width: 90vw;
+}
+.card span {
+  color: var(--gray);
+}
+.colored {
+  color: var(--gray-dark) !important;
+}
+.card img {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  display: inline;
+}
+.card .details {
+  display: none;
+  position: absolute;
+  top: -120px;
+  left: 50px;
+  width: 250px;
+  height: 100px;
+  overflow: hidden;
+  font-size: 15px;
+  background-color: var(--gray-dark);
+  color: var(--white);
+  padding: 10px;
+}
+.show {
+  display: block !important;
+}
+.card .info-text {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  padding-right: 16px;
+}
+.message {
+  display: none;
+}
+@media screen and (min-width: 576px) {
+  main {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  main {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 992px) {
+  main {
+    width: 90%;
+  }
+  .message {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    padding-right: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main {
+    width: 80%;
+  }
+  .message {
+    top: 55%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main {
+    width: 70%;
+  }
+}

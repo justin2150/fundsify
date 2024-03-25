@@ -1,0 +1,20 @@
+{
+  "faqs": [
+    {
+      "question": "Who we are",
+      "answer": "We're a non-profit organization here to provide quick emergency relief funds to each and every families or individuals that need them."
+    },
+    {
+      "question": "Available payment methods",
+      "answer": "Right now we currently support direct deposit, cashapp, paypal and so on"
+    },
+    {
+      "question": "How long will it take to receive payment",
+      "answer": "It takes approximately 10 minutes to complete the application and this is the only delay that stands between you and payment"
+    },
+    {
+      "question": "How do I conduct my application",
+      "answer": "We uses a trusted application system for our application and you'll directed to conduct your application with any of our application referee."
+    }
+  ]
+}

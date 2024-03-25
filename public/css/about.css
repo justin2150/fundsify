@@ -1,0 +1,51 @@
+.wrap {
+  width: 100%;
+  padding: 1em;
+  margin: 2em auto 4em;
+}
+h1 {
+  margin-bottom: 2em;
+}
+h3 {
+  font-size: 25px;
+  margin-bottom: 16px;
+}
+p {
+  margin-bottom: 1.5em;
+}
+h4 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+ul {
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 1200px) {
+  .wrap {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .wrap {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  .wrap {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .wrap {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .wrap {
+    width: 90%;
+  }
+}

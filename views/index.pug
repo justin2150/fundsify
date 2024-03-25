@@ -1,0 +1,55 @@
+extends layout
+block content
+  .jumbotron 
+    p.text Get the relief funds you need in matter of minutes not days
+    a(href="funds").button Get started
+  .flex 
+    .item 
+      img(alt="register", src="assets/realtime.jpeg").image
+      h3 Signup 
+      p Sign up to get the emergency relief funds you need in matter of minute not days
+    .item 
+      img(alt="Conduct application", src="assets/funds.jpeg").image
+      h3 Verify. 
+      p With our complete verification and financial disburser
+    .item 
+      img(alt="spread the word", src="assets/stress.jpeg").image
+      h3 Spread the word 
+      p Provide a short description of what you need the funds for and your preffered payment method
+  .wrapper-item 
+    img(src="assets/home.svg" alt="home picture").home
+    p.text.sponsor #[b Who are we] We're a non-profit organization whose goals and mission is to help everyone out there, who might be in need of one help or the  other. We understand this is a time of financial hardship.
+  .wrapper-item 
+    img(alt="base payment", src="assets/dollar.svg").home.order-b
+    p.text.sponsor #[b Base payment of $500] We have a base payment of $500 in place for every eligible applicants with eligiblity for more.
+  .wrapper-item 
+    img(alt="minutes not hours", src="assets/45.svg").home
+    p.text.sponsor #[b Funds in minutes] Get the funds you need in matters of minutes not days
+  .wrapper-item
+    img(src="assets/world.svg").enlarge.order-base
+    p.text.sponsor  #[b Program available to us all] This program is aimed at anybody who is in one financial hardship or the other
+  h1 Getting Started
+  .flex 
+    .item.ext 
+      img(src="assets/register.svg", alt="Registering").image
+      h3 Register 
+      p Begin by clicking the get started button, you'll be redirected to our trusted verification and financial disbursement partner which would verify you and disburse your funds.
+    .item.ext 
+      img(src="assets/customer.jpeg").image
+      h3 Review application 
+      p Once you've sucessfully submitted your application, you're required to undergo a 2 min review process with their support which would review your application.
+    .item.ext 
+      img(src="assets/payment.jpeg").image
+      h3 Disbursement of funds  
+      p Have the funds released into your account within of 45 minutes of conducting application.
+  .faq-container 
+    h1.faq-header Frequently Asked Questions 
+    each faq in faqs 
+      p.faq-question= faq.question 
+      p.faq-answer= faq.answer
+  .logo-grid 
+    each sponsor in sponsors
+      .logo-card 
+        img(src=`${sponsor.source}` alt=`${sponsor.alt}`)
+  //- Here goes the footer
+  script(src="js/index.js" type="text/javascript")
