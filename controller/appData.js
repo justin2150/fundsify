@@ -6,14 +6,6 @@ const { faqs } = JSON.parse(fs.readFileSync(`${__dirname}/../data/faqs.json`));
 const getStates = (country) =>
   JSON.parse(fs.readFileSync(`${__dirname}/../data/${country}-states.json`));
 
-exports.getAllStates = catchAsync(async (_, res) => {
-  const { states } = getStates('usa');
-  res.status(200).json({
-    status: 'success',
-    states,
-  });
-});
-
 exports.getSponsors = () => {
   let sponsors = JSON.parse(
     fs.readFileSync(`${__dirname}/../data/sponsors.json`, 'utf-8')

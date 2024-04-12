@@ -1,4 +1,4 @@
-@import url('styles.css');
+@import url('./styles.css');
 form {
   padding: 48px 24px 64px;
   border: solid var(--gray);

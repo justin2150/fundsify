@@ -5,7 +5,6 @@ const logger = require('morgan');
 const cors = require('cors');
 
 const indexRouter = require('./routes/index');
-const clientRouter = require('./routes/clientRouter');
 const fundsRouter = require('./routes/fundsRouter');
 
 const app = express();
@@ -48,7 +47,6 @@ app.use(logger('dev'));
 
 app.use('/', indexRouter);
 app.use('/funds', fundsRouter);
-app.use('/api/v1/client', clientRouter);
 
 // Submit Basic Info
 app.get('/basic', (_, res) => {
