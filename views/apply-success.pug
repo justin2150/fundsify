@@ -6,6 +6,6 @@ block content
     img(src="/assets/svgs/check.svg" alt="Success")
     p.app-id Your Funds application has successfully began and your appID is: #[span #{`${appID}`.slice(0, 3) + ' - ' + `${appID}`.slice(-4)}]
     
-    p Track your application #[a(href=`funds/status/${appId}`) by clicking here] or using the appID above.
+    p Track your application #[a(href=`/funds/status/${appID}`) by clicking here] or using the appID above.
 
     p Next step: Click on the chat icon in the bottom right corner to undergo an interactive session with an application referee.

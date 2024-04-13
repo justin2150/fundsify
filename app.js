@@ -31,15 +31,6 @@ if (process.env.NODE_ENV === 'development') {
 app.set('view engine', 'pug');
 app.set('views', './views');
 
-if (process.env.NODE_ENV === 'development') {
-  app.use(
-    cors({
-      // SET ORIGIN IN THE HOST
-      origin: 'http://localhost:5173',
-      credentials: true,
-    })
-  );
-}
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
