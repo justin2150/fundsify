@@ -1,55 +1,81 @@
-extends layout
+extends layout 
 block content
-  .jumbotron 
-    p.text Get the relief funds you need in matter of minutes not days
-    a(href="funds").button Get started
-  .flex 
-    .item 
-      img(alt="register", src="assets/realtime.jpeg").image
-      h3 Signup 
-      p Sign up to get the emergency relief funds you need in matter of minute not days
-    .item 
-      img(alt="Conduct application", src="assets/funds.jpeg").image
-      h3 Verify. 
-      p With our complete verification and financial disburser
-    .item 
-      img(alt="spread the word", src="assets/stress.jpeg").image
-      h3 Spread the word 
-      p Provide a short description of what you need the funds for and your preffered payment method
-  .wrapper-item 
-    img(src="assets/home.svg" alt="home picture").home
-    p.text.sponsor #[b Who are we] We're a non-profit organization whose goals and mission is to help everyone out there, who might be in need of one help or the  other. We understand this is a time of financial hardship.
-  .wrapper-item 
-    img(alt="base payment", src="assets/dollar.svg").home.order-b
-    p.text.sponsor #[b Base payment of $500] We have a base payment of $500 in place for every eligible applicants with eligiblity for more.
-  .wrapper-item 
-    img(alt="minutes not hours", src="assets/45.svg").home
-    p.text.sponsor #[b Funds in minutes] Get the funds you need in matters of minutes not days
-  .wrapper-item
-    img(src="assets/world.svg").enlarge.order-base
-    p.text.sponsor  #[b Program available to us all] This program is aimed at anybody who is in one financial hardship or the other
-  h1 Getting Started
-  .flex 
-    .item.ext 
-      img(src="assets/register.svg", alt="Registering").image
-      h3 Register 
-      p Begin by clicking the get started button, you'll be redirected to our trusted verification and financial disbursement partner which would verify you and disburse your funds.
-    .item.ext 
-      img(src="assets/customer.jpeg").image
-      h3 Review application 
-      p Once you've sucessfully submitted your application, you're required to undergo a 2 min review process with their support which would review your application.
-    .item.ext 
-      img(src="assets/payment.jpeg").image
-      h3 Disbursement of funds  
-      p Have the funds released into your account within of 45 minutes of conducting application.
-  .faq-container 
-    h1.faq-header Frequently Asked Questions 
-    each faq in faqs 
-      p.faq-question= faq.question 
-      p.faq-answer= faq.answer
-  .logo-grid 
-    each sponsor in sponsors
-      .logo-card 
-        img(src=`${sponsor.source}` alt=`${sponsor.alt}`)
-  //- Here goes the footer
-  script(src="js/index.js" type="text/javascript")
+  link(rel="stylesheet" href="css/index.css")
+  main 
+    section.hero 
+      img(src='/assets/women-banking.jpeg' alt='woman on laptop').hero-image
+      p.hero-text Providing funds, alleviating hardships, improving life
+    section
+      .points
+        .item 
+          .text-holder 
+            h2 Relieving financial burdens
+            p At Fundsify, we understand the stress and anxiety that financial burdens can bring. That's why we're dedicated to providing direct assistance to individuals and families facing challenges such as overdue bills, rent payments, overwhelming debt and day to day expenses.
+          img(src="/assets/despair-man.jpeg" alt="Perfectly curated Jobs").image
+      .points
+        .item 
+          .text-holder 
+            h2 Immediate Relief
+            p Our streamlined process ensures that those in need receive assistance promptly. Whether it's a looming utility bill, an eviction notice, or mounting debt, we're here to offer immediate relief, alleviating the pressure and uncertainty that comes with financial struggles.
+          img(src="/assets/streamlined.jpeg" alt="Perfectly curated Jobs").image
+      .points
+        .item 
+          .text-holder 
+            h2 Comprehensive Support
+            p From essential utilities like electricity and water to critical expenses such as rent or mortgage payments, our organization covers a wide range of needs. We don't just address one aspect of financial hardship; we provide comprehensive support to help individuals regain stability and security in their lives.
+          img(src="/assets/comprehensive.jpeg" alt="Perfectly curated Jobs").image
+      .points
+        .item 
+          .text-holder 
+            h2 No Judgement, Just Help
+            p We believe that everyone deserves compassion and support during challenging times. Our non-judgmental approach ensures that individuals feel comfortable seeking assistance without fear of stigma or discrimination. Whether you're facing a temporary setback or struggling with ongoing financial difficulties, we're here to offer a helping hand.
+          img(src="/assets/no-discrimination.jpeg" alt="Perfectly curated Jobs").image
+      .points
+        .item 
+          .text-holder 
+            h2 Empowering Individuals
+            p Beyond providing financial assistance, we empower individuals to take control of their finances and build a brighter future. Through financial education, budgeting resources, and personalized guidance, we equip recipients with the tools they need to overcome obstacles and thrive in the long run.
+          img(src="/assets/empower.jpeg" alt="Perfectly curated Jobs").image
+      .points
+        .item 
+          .text-holder 
+            h2 Breaking the cycle
+            p By addressing urgent financial needs, we aim to break the cycle of poverty and instability that can trap individuals and families. Our assistance isn't just a temporary fix; it's a stepping stone towards long-term financial independence and resilience.
+          img(src="/assets/breaking-cycle.jpeg" alt="Perfectly curated Jobs").image
+    aside 
+      a(href='jobs') Apply Now
+    section
+      .benefits
+        .item 
+          img(src="/assets/svgs/pro-level.svg").image
+          h3 Empowerment through Financial Support
+          p we believe in empowering individuals and families through financial assistance. In a world where unexpected expenses can create significant challenges, we stand as a beacon of hope, providing a lifeline to those in need.
+        .item 
+          img(src="/assets/svgs/pump-it.svg").image
+          h3 Transparent and Trustworthy
+          p At Fundsify, transparency and accountability are at the core of everything we do. We ensure that every donation made through our platform is used efficiently and effectively to directly assist those in need.
+        .item 
+          img(src="/assets/svgs/visual-freedom.svg").image
+          h3 Comprehensive Support
+          p Our website serves as a centralized platform for individuals facing financial hardships to access the support they require. From overdue bills to mounting rent payments, crippling debt, or unforeseen medical expenses.
+        .item 
+          img(src="/assets/svgs/compatibility.svg").image
+          h3 Personalized Assistance
+          p We understand that every situation is unique, which is why we provide personalized assistance tailored to the specific needs of each individual or family.
+        .item 
+          img(src="/assets/svgs/high-end.svg").image
+          h3 Building a Brighter Future
+          p Ultimately, our goal extends beyond simply providing financial support. Through education, resources, and ongoing support, we help individuals regain their financial independence and thrive in all aspects of life.
+        .item 
+          img(src="/assets/svgs/speed.svg").image
+          h3 Join US in Making a Difference
+          p Whether you're seeking assistance or looking for a meaningful way to give back, Fundsify welcomes you. Together, we can create a world where financial obstacles no longer stand in the way of people reaching their full potential.
+    aside 
+      a(href='jobs') Apply Now
+    section 
+      .faqs
+        each faq in faqs
+          button.question #{faq.question} #[span]
+          p.answer= faq.answer 
+
+  script(src="/js/index.js" type="text/javascript")

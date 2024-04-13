@@ -1,415 +1,281 @@
-body {
+.hero {
+  position: relative;
   width: 100%;
   margin: 0 auto;
-  padding: 0 1em !important;
-  background-color: #f5f9fc;
-}
-a {
-  text-decoration: none;
-}
-.jumbotron {
-  background-image: url('../assets/hero-image.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  margin-bottom: 1em;
-  padding-bottom: 1em;
-}
-.jumbotron .text {
-  border-bottom: solid thin #fff;
-  font-size: 2rem;
-  width: 40%;
-  margin: 0 auto;
-  padding: 25% 0 0;
-  text-align: center;
-  color: #fff;
-}
-.jumbotron .button {
-  text-decoration: none;
-  text-transform: capitalize;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  background-color: #0275d8;
-  max-width: 150px;
-  margin: 2.5rem auto;
-  color: #fff;
-  display: block;
-  text-align: center;
-}
-.jumbotron .hidden {
-  visibility: hidden;
-}
-.wrapper-item .text {
-  text-align: center;
-}
-.wrapper-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  margin: 2em auto;
-}
-.wrapper-item > img {
-  margin-right: 4em;
-}
-.wrapper-item .sponsor {
-  word-spacing: 0.35em;
-  width: 40%;
-}
-.wrapper-item .sponsor b {
-  text-decoration: underline;
-  display: block;
-  margin-bottom: 1em;
-  font-size: 1.25em;
-}
-.wrapper-item .enlarge {
-  width: 30%;
-  height: 30%;
-}
-.wrapper-item .home {
-  width: 20%;
-  height: 20%;
-}
-.wrapper-item .order-b {
-  order: 1;
-}
-/* All code that goes here will handle the Featured Functions */
-
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 1em;
-}
-.item {
-  flex: 1;
-  height: 350px;
-  padding: 1rem;
-  background-color: #ffffff;
-  border-radius: 0.5rem;
-  /* Below are redundant code, optimized them later to accomodate the first flex item */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  text-align: center;
-  margin: 0.75rem 0;
-}
-.resize {
-  width: 200px;
-  height: 200px;
-}
-.item > * > span {
-  font-weight: 600;
-}
-.adjust {
-  display: block;
-  margin: 0 auto;
-}
-.flex .image {
-  margin: 0 auto;
-  display: block;
-  max-height: 200px;
-}
-h1 {
-  text-align: center;
-  margin: 2rem 0;
-}
-.faq-container {
-  width: 90%;
-  margin: 2rem auto;
-  background-color: #fff;
-  border: solid medium #ecf0f2;
-  border-radius: 1rem;
-}
-.faq-question {
-  padding-bottom: 0.5rem;
-  border-bottom: #ecf0f2 solid 2px;
-  margin: 0.5rem 2rem;
-  line-height: 1.5em;
-  cursor: pointer;
-  position: relative;
-  font-size: 1.2em;
-}
-.faq-question::after {
-  content: '';
-  width: 10px;
-  height: 10px;
-  border-bottom: 1px solid #000;
-  border-right: 1px solid #000;
-  transform: rotate(45deg);
-  position: absolute;
-  right: 20px;
-}
-
-.faq-answer {
-  display: none;
-  margin: 0.5rem 2rem;
-  padding-bottom: 0.5rem;
-}
-.display-answer {
-  display: block;
-}
-h3 {
-  text-align: center;
-  margin: 1em 0;
-}
-.carousel-wrapper {
-  position: relative;
-  top: 0;
+  background: linear-gradient(#99b6be 40%, #7897a9 100%);
   overflow: hidden;
-  width: 95%;
-  margin: 0 auto;
-  padding: 1rem 0;
-  background-color: #fff;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  padding: 100px 0;
+  margin-bottom: 48px;
 }
-.trustpilot-widget {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  top: 0;
-  z-index: 1100;
-  width: 20%;
-  left: 1em;
+.hero-image {
+  width: 100%;
+  height: auto;
 }
-.trustpilot-widget .img {
-  width: 160px;
-  height: 30px;
-}
-.trustpilot-widget a {
-  color: inherit;
-}
-.trustpilot-widget .brand-logo {
-  display: flex;
-  align-items: center;
-}
-.trustpilot-widget .icon {
-  width: 27px;
-  height: 27px;
-  margin-right: 0.125em;
-  padding-bottom: 0.35rem;
-}
-.trustpilot-widget .icon + p {
-  font-size: 1.2em;
-}
-.carousel {
-  position: relative;
-  top: 0;
-  max-width: 82.5%;
-  right: 0;
-}
-.carousel-item {
-  opacity: 0;
+.hero-text {
   position: absolute;
-  top: 0;
-  margin: auto;
-  z-index: 100;
-  transition: transform 0.5s, z-index 0.5s, opacity 0.5s;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.carousel-item .rev-con {
-  width: 25%;
-}
-.active {
-  position: relative;
-  z-index: 900;
-  opacity: 1;
-}
-.prev,
-.next {
-  z-index: 800;
-}
-.prev {
-  transform: translateX(-100%);
-}
-.next {
-  transform: translateX(100%);
-}
-.carousel-control-next,
-.carousel-control-prev {
-  position: absolute;
-  top: 50%;
-  width: 1rem;
-  height: 1rem;
-  margin-top: -0.5rem;
-  border: 3px solid #000;
-  z-index: 1000;
-  cursor: pointer;
-  transform: rotate(45deg);
-}
-.carousel-control-next {
-  right: 0.5rem;
-  border-left: none;
-  border-bottom: none;
-}
-.carousel-control-prev {
-  left: 0.5rem;
-  border-top: none;
-  border-right: none;
-}
-.carousel-item img {
-  width: 110px;
-  height: 20px;
-  margin: 0.5em 0;
-}
-.rev-con b {
-  float: right;
-  clear: right;
-  margin: 0.5em 0;
-}
-.carousel-item h5 {
+  top: 10vh;
+  width: 90%;
+  left: 5%;
   text-align: center;
-  margin-top: 0.5em;
-  font-style: italic;
+  color: var(--white);
+  font-size: 30px;
 }
-.logo-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 0.5em 1em;
-  width: 99%;
-  margin: 2em auto 1em;
-  background-color: #fff;
-  padding: 1em;
+.points {
+  /* width: 75%; */
+  background-color: var(--white);
 }
-.logo-card img {
-  width: 220px;
-  height: 100px;
-  padding: 2em 2.5em;
-  display: block;
+.points .item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 80px 32px;
+}
+.points:nth-child(1) {
+  background-color: #f3f2f6;
+}
+.points:nth-child(2) {
+  background-color: var(--light);
+}
+.points:nth-child(3) {
+  background-color: #fcfcfd;
+}
+.points .text-holder {
+  color: var(--gray-dark);
+  padding: 20px;
+}
+.text-holder h2 {
+  margin-bottom: 32px;
+  font-size: 32px;
+  text-transform: capitalize;
+}
+.text-holder p {
+  font-size: 20px;
+  margin: 32px 0;
+}
+
+.points .image {
+  width: 90%;
+  height: 300px;
   margin: 0 auto;
-  box-shadow: 2.5px 2.5px 2.5px #ecf0f2, -2.5px -2.5px 2.5px #ecf0f2;
-  border-radius: 0.25em;
 }
-.item-22,
-.item-23 {
-  display: none;
+
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fcfcfd;
+  padding: 32px 0;
+  width: 100%;
+  margin-bottom: 40px;
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .item {
-    max-width: 30%;
-  }
-  .item .image {
-    width: 90%;
-    height: auto;
-  }
-  .wrapper-item {
-    width: 90%;
-  }
-  .wrapper-item .enlarge {
-    width: 50%;
-    height: 50%;
-  }
-  .wrapper-item .sponsor {
-    width: auto;
-    padding: 1em;
-  }
-  .faq-container {
-    width: 98%;
-  }
-  .carousel-wrapper {
-    width: 100%;
-  }
-  .trustpilot-widget {
-    min-width: 15%;
-    left: 0.5em;
-  }
-  .trustpilot-widget .img {
-    width: 125px;
-    height: 22.5px;
-  }
-  .logo-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  .logo-card img {
-    width: 170px;
-    height: 100px;
-    padding: 1.25em 1.5em;
-    height: 100px;
-    padding: 1.25em 1.5em;
-  }
-  .item-22,
-  .item-23 {
-    display: block;
-  }
+aside a {
+  font-size: 24px;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--gray-dark);
+  padding: 16px 10%;
+  background-color: none;
+  border-radius: 32px;
+  border: solid 2px;
+  text-wrap: nowrap;
 }
-@media screen and (max-width: 767px) {
-  .jumbotron .text {
-    font-size: 1.2rem;
-    padding-top: 50%;
+
+.benefits {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  color: var(--gray-dark);
+  background-color: var(#fcfcfd);
+  padding: 40px 0 56px;
+  margin-bottom: 80px;
+}
+.benefits .item {
+  padding: 24px;
+}
+.benefits .image {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 16px;
+}
+.benefits h3 {
+  margin-bottom: 16px;
+  text-transform: capitalize;
+}
+.faqs {
+  width: 96%;
+  margin: 80px auto;
+  border: solid #e5e5e5;
+}
+.faqs .question {
+  position: relative;
+  text-transform: capitalize;
+  cursor: pointer;
+  width: 100%;
+  padding: 24px 30px;
+  border: solid 1px #e5e5e5;
+  background: none;
+  font-size: 20px;
+  color: #343a50;
+  text-align: left;
+}
+.faqs .question span {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 30px;
+  right: 30px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../assets/svgs/arrow-down.svg);
+  transition: all 1s;
+}
+span.active {
+  transform: rotate(180deg);
+}
+
+.faqs .answer {
+  max-height: 0;
+  opacity: 0;
+  color: #343a50;
+  font-size: 18px;
+  padding: 0;
+  transition: all 1s;
+}
+.answer.active {
+  max-height: 200px;
+  padding: 20px 30px;
+  opacity: 100;
+}
+/* p span {
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-fill-color: transparent !important;
+} */
+
+@media screen and (min-width: 576px) {
+  .hero-text {
     width: 80%;
+    left: 10%;
+    font-size: 40px;
   }
-  .jumbotron .button {
-    font-size: 1.2rem;
+  .points .image {
+    height: 370px;
   }
-  .wrapper-item {
-    flex-direction: column;
+  aside a {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+  .faqs {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 0;
+  }
+  .hero-text {
+    width: 60%;
+    left: 20%;
+  }
+  .points {
     width: 100%;
   }
-  .wrapper-item > img {
-    margin-right: auto;
+  .points .item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
   }
-  .wrapper-item .enlarge {
-    width: 100%;
-    height: 100%;
-  }
-  .wrapper-item .home {
-    width: 50%;
-    height: 50%;
+  .points .image {
+    width: 350px;
+    height: 350px;
+    border-radius: 80%;
     margin: 0 auto;
   }
-  .wrapper-item .sponsor {
-    width: 90%;
-    order: 1;
+  .points:nth-child(2n) .image {
+    order: -1;
   }
-  .flex {
-    flex-direction: column;
+  aside a {
+    padding-left: 112px;
+    padding-right: 112px;
   }
-  .item {
-    width: 100%;
+  .benefits {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-  .faq-container {
-    width: 100%;
+  .benefits .item {
+    max-width: 50%;
   }
-  .faq-header {
-    font-size: 1.5rem;
-    word-wrap: nowrap;
-    text-overflow: clip;
+  .faqs {
+    width: 80%;
   }
-  .faq-question {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  .carousel-wrapper {
-    flex-direction: column;
-  }
-  .trustpilot-widget {
+}
+@media screen and (min-width: 992px) {
+  .hero-image {
     width: 50%;
+    height: auto;
   }
-  .carousel-item {
-    flex-direction: column;
-    width: 98%;
+  .hero-text {
+    position: static;
+    text-align: center;
   }
-  .carousel-item .rev-con {
+  .points .item {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .points .image {
+    width: 400px;
+    height: 400px;
+  }
+  aside a {
+    padding-left: 128px;
+    padding-right: 128px;
+  }
+  .faqs {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-text {
+    width: 40%;
+    margin: 0 auto;
+  }
+  .points {
     width: 100%;
-    border-bottom: solid #ecf0f2;
-    margin-bottom: 1em;
   }
-  .carousel-item .rev-con:last-child {
-    border-bottom: none;
+  .points .item {
+    width: 80%;
   }
-  .logo-grid {
-    grid-template-columns: 1fr 1fr 1fr;
+  aside a {
+    padding-left: 144px;
+    padding-right: 144px;
   }
-  .logo-card img {
-    width: 100px;
-    height: 100px;
-    max-width: 100px;
-    height: 100px;
-    padding: 1em 1.25em;
+}
+@media screen and (min-width: 1400px) {
+  .hero-text {
+    width: 30%;
+  }
+  .points {
+    width: 100%;
+  }
+  .points .item {
+    width: 70%;
+  }
+  .points .image {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+  }
+  aside a {
+    padding-left: 176px;
+    padding-right: 176px;
+  }
+  .benefits .item {
+    width: calc(100% / 3);
+  }
+  .faqs {
+    width: 60%;
   }
 }
